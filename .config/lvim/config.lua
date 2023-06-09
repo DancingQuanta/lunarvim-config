@@ -91,7 +91,8 @@ lvim.builtin.treesitter.highlight.enable = true
 -- LSP settings
 
 -- Diagnostics
-lvim.lsp.diagnostics.virtual_text = false
+-- lvim.lsp.diagnostics.virtual_text = false
+vim.diagnostic.config({ virtual_text = false })
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 lvim.lsp.installer.setup.ensure_installed = {
@@ -105,7 +106,7 @@ lvim.lsp.installer.setup.ensure_installed = {
 lvim.plugins = {
   {"folke/trouble.nvim", cmd = "TroubleToggle"},
   {"brymer-meneses/grammar-guard.nvim"},
-  {"michaelb/sniprun", run = 'bash ./install.sh'},
+  {"michaelb/sniprun", build = 'bash ./install.sh'},
   -- { "lervag/vimtex" },
   -- {
   --   "iamcco/markdown-preview.nvim",
